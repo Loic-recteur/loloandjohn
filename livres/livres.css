@@ -81,8 +81,15 @@ button.video:hover .video-play { background: var(--ocre); }
 .l-film h3 { font-size: 1.6rem; margin-bottom: 12px; }
 .l-film p { color: #cbbfb1; }
 .l-jaquette { width: 120px; margin-bottom: 18px; box-shadow: 0 16px 30px -12px rgba(0,0,0,.6); }
-.l-fiche-sombre { background: #4a3d33; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
-.l-fiche-sombre li { background: var(--encre); color: var(--sable); }
+.l-fiche-sombre { background: transparent; gap: 0; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+.l-fiche-sombre li { background: var(--encre); color: var(--sable); border-top: 1px solid #4a3d33; }
 .l-fiche-sombre span { color: #cbbfb1; }
 .l-film .btn-clair { margin-bottom: 0; }
 @media (max-width: 720px) { .l-film { grid-template-columns: 1fr; gap: 20px; } }
+
+/* Bonus sous la bande-annonce : extraits, making-of */
+.bonus { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 14px; }
+.bonus-titre { width: 100%; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: #cbbfb1; }
+.bonus-video { display: flex; align-items: center; gap: 10px; padding: 0 12px 0 0; background: #3a2f27; border: 1px solid #4a3d33; color: var(--sable); font: inherit; font-size: .88rem; cursor: pointer; text-align: left; transition: border-color .2s ease; }
+.bonus-video img { width: 96px; aspect-ratio: 16 / 9; object-fit: cover; }
+.bonus-video:hover, .bonus-video.actif { border-color: var(--ocre); }

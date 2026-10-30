@@ -14,8 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=4">
-  <link rel="stylesheet" href="livres.css?v=4">
+  <link rel="stylesheet" href="../style.css?v=5">
+  <link rel="stylesheet" href="livres.css?v=6">
   <!-- Données produit lisibles par Google (prix, auteurs) -->
   <script type="application/ld+json">
   {
@@ -176,10 +176,18 @@
       <h2 class="section-title">Prolongez le voyage en images</h2>
 
       <article class="l-film">
-        <button class="video" type="button" data-src="https://www.youtube-nocookie.com/embed/Zej6ZeVcVmk?autoplay=1&amp;rel=0" aria-label="Lire la vidéo : bande-annonce du film Akhdar">
-          <img src="../images/teaser-film-akhdar.jpg" alt="Affiche du film Akhdar, le sel du désert" loading="lazy">
-          <span class="video-play" aria-hidden="true"></span>
-        </button>
+        <div class="l-film-media">
+          <button class="video" type="button" data-src="https://www.youtube-nocookie.com/embed/Zej6ZeVcVmk?autoplay=1&amp;rel=0" aria-label="Lire la vidéo : bande-annonce du film Akhdar">
+            <img src="../images/teaser-film-akhdar.jpg" alt="Affiche du film Akhdar, le sel du désert" loading="lazy">
+            <span class="video-play" aria-hidden="true"></span>
+          </button>
+          <div class="bonus">
+            <p class="bonus-titre">Coulisses</p>
+            <button class="bonus-video" type="button" data-src="https://www.youtube-nocookie.com/embed/zScJRc37bOI?autoplay=1&amp;rel=0">
+              <img src="../images/making-of-akhdar.jpg" alt="" loading="lazy"><span>Le making-of</span>
+            </button>
+          </div>
+        </div>
         <div>
           <img class="l-jaquette" src="../images/film-akhdar.jpg" alt="Jaquette du film Akhdar, le sel du désert" loading="lazy">
           <h3>Akhdar, le sel du désert</h3>
@@ -193,10 +201,21 @@
       </article>
 
       <article class="l-film">
-        <button class="video" type="button" data-src="https://www.youtube-nocookie.com/embed/Un17eaASzkg?autoplay=1&amp;rel=0" aria-label="Lire la vidéo : bande-annonce du film Inde">
-          <img src="../images/teaser-film-inde.jpg" alt="Affiche du film Inde, une aventure humaine de 13 000 km" loading="lazy">
-          <span class="video-play" aria-hidden="true"></span>
-        </button>
+        <div class="l-film-media">
+          <button class="video" type="button" data-src="https://www.youtube-nocookie.com/embed/Un17eaASzkg?autoplay=1&amp;rel=0" aria-label="Lire la vidéo : bande-annonce du film Inde">
+            <img src="../images/teaser-film-inde.jpg" alt="Affiche du film Inde, une aventure humaine de 13 000 km" loading="lazy">
+            <span class="video-play" aria-hidden="true"></span>
+          </button>
+          <div class="bonus">
+            <p class="bonus-titre">Extraits du film</p>
+            <button class="bonus-video" type="button" data-src="https://www.youtube-nocookie.com/embed/kcAHSaRWdIA?autoplay=1&amp;rel=0">
+              <img src="../images/extrait-inde-varanasi.jpg" alt="" loading="lazy"><span>La ville sainte de Varanasi</span>
+            </button>
+            <button class="bonus-video" type="button" data-src="https://www.youtube-nocookie.com/embed/QE2GODqgEBQ?autoplay=1&amp;rel=0">
+              <img src="../images/extrait-inde-rumtek.jpg" alt="" loading="lazy"><span>Le monastère de Rumtek</span>
+            </button>
+          </div>
+        </div>
         <div>
           <img class="l-jaquette" src="../images/film-inde.jpg" alt="Jaquette du film Inde" loading="lazy">
           <h3>Inde – Le film</h3>
@@ -249,6 +268,23 @@
 
   <script>
     // Les vidéos ne se chargent qu'au clic : la page reste rapide et YouTube/Vimeo ne reçoivent rien avant.
+    // Un extrait ou un making-of se lit à la place de la bande-annonce, dans le même cadre.
+    document.querySelectorAll('button.bonus-video').forEach(function (bouton) {
+      bouton.addEventListener('click', function () {
+        var media = bouton.closest('.l-film-media');
+        var cadre = document.createElement('iframe');
+        cadre.src = bouton.dataset.src;
+        cadre.title = bouton.textContent.trim();
+        cadre.allow = 'autoplay; fullscreen; picture-in-picture';
+        cadre.allowFullscreen = true;
+        var bloc = document.createElement('div');
+        bloc.className = 'video';
+        bloc.appendChild(cadre);
+        media.firstElementChild.replaceWith(bloc);
+        media.querySelectorAll('.bonus-video').forEach(function (b) { b.classList.remove('actif'); });
+        bouton.classList.add('actif');
+      });
+    });
     document.querySelectorAll('button.video').forEach(function (bouton) {
       bouton.addEventListener('click', function () {
         var cadre = document.createElement('iframe');
