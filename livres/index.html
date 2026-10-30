@@ -107,7 +107,12 @@
   <!-- 4. L'histoire du livre -->
   <section class="l-histoire">
     <div class="wrap l-histoire-grid">
-      <img src="../images/livre-inde-mains.jpg" alt="Le livre Inde posé sur une table de café" loading="lazy">
+      <div>
+        <div class="video">
+          <iframe src="https://player.vimeo.com/video/305039581?dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" title="L'auto-édition du livre Inde" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="video-legende">Les coulisses : de l'imprimerie à la livraison des premiers livres.</p>
+      </div>
       <div>
         <h2 class="section-title">Un livre né sur la route</h2>
         <p>Deux amis d'enfance, photographes autodidactes, achètent deux vieilles Yamaha RX 135 à Pondichéry et partent à la rencontre de l'Inde, loin des circuits touristiques.</p>
@@ -156,28 +161,44 @@
     </div>
   </section>
 
-  <!-- 6. Les films en complément -->
+  <!-- 6. Les films : teaser, description, prix, achat -->
   <section id="films" class="l-films">
     <div class="wrap">
+      <p class="kicker">Les films</p>
       <h2 class="section-title">Prolongez le voyage en images</h2>
-      <div class="l-films-grid">
-        <article>
-          <img src="../images/film-inde.jpg" alt="Jaquette du film Inde" loading="lazy">
-          <div>
-            <h3>Inde – Le film</h3>
-            <p>Le récit en images de nos dix mois d'aventure, des plaines du Rajasthan aux plus hautes routes de l'Himalaya. 55 minutes et un bêtisier, sur une clé USB en coffret cartonné.</p>
-            <div class="l-achat"><strong class="l-prix">10 €</strong><a class="link" href="https://loicterrier.com/boutique/film-inde/">Commander →</a></div>
-          </div>
-        </article>
-        <article>
-          <img src="../images/film-akhdar.jpg" alt="Jaquette du film Akhdar, le sel du désert" loading="lazy">
-          <div>
-            <h3>Akhdar, le sel du désert</h3>
-            <p>Un documentaire artistique avec l'illustrateur Jérémie Bonamant, sur la route du sel jusqu'aux villages nomades. On y suit Ali, chamelier des grandes méharées. DVD et bonus en coffret.</p>
-            <div class="l-achat"><strong class="l-prix">15 €</strong><a class="link" href="https://loicterrier.com/boutique/film-akhdar/">Commander →</a></div>
-          </div>
-        </article>
-      </div>
+
+      <article class="l-film">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/Fejhsj5I1pQ?rel=0" title="Akhdar, le sel du désert – présentation du film" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+          <img class="l-jaquette" src="../images/film-akhdar.jpg" alt="Jaquette du film Akhdar, le sel du désert" loading="lazy">
+          <h3>Akhdar, le sel du désert</h3>
+          <p>Un documentaire artistique avec l'illustrateur Jérémie Bonamant, sur la route du sel, des mines de la côte jusqu'aux villages nomades. On y suit Ali, chamelier des grandes méharées, dans un territoire où la vie est si fragile.</p>
+          <ul class="l-fiche l-fiche-sombre">
+            <li><span>Support</span>DVD + bonus</li>
+            <li><span>Coffret</span>Digifile cartonné</li>
+          </ul>
+          <div class="l-achat"><strong class="l-prix">15 €</strong><a class="btn btn-clair" href="https://loicterrier.com/boutique/film-akhdar/">Commander le film</a></div>
+        </div>
+      </article>
+
+      <article class="l-film">
+        <!-- Teaser du film Inde : remplacer cette image par la vidéo quand elle sera disponible -->
+        <div class="video video-attente">
+          <img src="../images/film-inde.jpg" alt="Jaquette du film Inde, une aventure humaine de 13 000 km" loading="lazy">
+        </div>
+        <div>
+          <h3>Inde – Le film</h3>
+          <p>Le récit en images de nos dix mois d'aventure, au contact de la rue et au plus près des habitants : des plaines désertiques du Rajasthan aux plus hautes routes de l'Himalaya, des mégalopoles aux rites bouddhistes et musulmans.</p>
+          <ul class="l-fiche l-fiche-sombre">
+            <li><span>Durée</span>55 min + bêtisier</li>
+            <li><span>Support</span>clé USB 8 Go</li>
+            <li><span>Musique</span>originale</li>
+          </ul>
+          <div class="l-achat"><strong class="l-prix">10 €</strong><a class="btn btn-clair" href="https://loicterrier.com/boutique/film-inde/">Commander le film</a></div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -213,7 +234,7 @@
 
   <footer class="wrap contact">
     <p><a href="../">← Retour à l'accueil</a></p>
-    <p class="small">© Lolo &amp; John Photographers</p>
+    <p class="small">© Lolo &amp; John Photographers · <a href="../mentions-legales/">Mentions légales</a></p>
   </footer>
 
 </body>

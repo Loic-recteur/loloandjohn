@@ -89,6 +89,18 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 }
 .galerie figure:hover figcaption { opacity: 1; }
 
+/* Festivals & expositions */
+.souvenirs-grille { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 240px; gap: 10px; padding: 0 12px; margin-bottom: 48px; }
+.souvenirs-grille figure { position: relative; overflow: hidden; }
+.souvenirs-grille img { height: 100%; object-fit: cover; filter: sepia(.25) saturate(.9); transition: filter .4s ease, transform .4s ease; }
+.souvenirs-grille figure:hover img { filter: none; transform: scale(1.03); }
+.souvenirs-grille .grand { grid-column: span 2; grid-row: span 2; }
+.souvenirs-grille .large { grid-column: span 2; }
+.souvenirs-grille figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 12px 10px; background: linear-gradient(transparent, rgba(0,0,0,.65)); color: #fff; font-size: .85rem; }
+.dates { list-style: none; max-width: 820px; }
+.dates li { padding: 12px 0; border-top: 1px solid #d6c5a9; color: var(--gris); }
+.dates strong { font-family: var(--serif); color: var(--encre); font-size: 1.15rem; margin-right: 12px; }
+
 /* Boutique */
 .produits { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 24px; }
 .produit { text-decoration: none; display: flex; flex-direction: column; }
@@ -119,6 +131,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   .duo, .projet { grid-template-columns: 1fr; gap: 24px; }
   .projet.reverse img { order: 0; }
   .prix, .produits { grid-template-columns: 1fr 1fr; }
+  .souvenirs-grille { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
   .stages-photos { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 140px 140px; }
   .stages-photos img:first-child { grid-column: span 2; grid-row: auto; }
   section { padding: 64px 0; }
