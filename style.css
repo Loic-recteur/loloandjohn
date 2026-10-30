@@ -60,6 +60,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 /* Présentation */
 .intro blockquote { font-family: var(--serif); font-size: clamp(1.4rem, 2.6vw, 2rem); max-width: 30ch; margin-bottom: 56px; }
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 900px; }
+.personne img { aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: 18px; }
 .duo h3 { font-size: 1.4rem; margin-bottom: 8px; }
 .duo p { color: var(--gris); }
 
