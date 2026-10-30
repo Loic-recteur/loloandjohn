@@ -29,6 +29,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   transition: background .2s ease;
 }
 .btn:hover { background: var(--ocre); }
+.btn-clair { background: var(--sable); color: var(--encre); margin-bottom: 48px; }
+.btn-clair:hover { background: var(--ocre); color: var(--sable); }
+.voir-tout { margin-top: 40px; }
 .link { color: var(--ocre); font-weight: 600; text-decoration: none; }
 .link:hover { text-decoration: underline; }
 
@@ -39,7 +42,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   padding: 22px 32px; flex-wrap: wrap; gap: 12px;
 }
 .logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; text-decoration: none; }
-.logo span { color: var(--ocre); font-style: italic; }
+.logo span { font-family: var(--sans); font-weight: 500; color: var(--ocre); margin: 0 .12em; }
 .nav nav { display: flex; gap: 24px; flex-wrap: wrap; }
 .nav nav a { text-decoration: none; font-weight: 500; font-size: .95rem; }
 .nav nav a:hover { text-decoration: underline; }
@@ -96,10 +99,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 .produit strong { color: var(--ocre); }
 
 /* Stages */
-.stages { background: url("images/poesie-desertique.jpg") center/cover; position: relative; }
-.stages::before { content: ""; position: absolute; inset: 0; background: rgba(246,239,228,.88); }
-.stages-inner { position: relative; }
-.stages p { max-width: 55ch; margin-bottom: 28px; }
+.stages { background: var(--sable-fonce); }
+.stages p { max-width: 62ch; margin-bottom: 32px; }
+.stages-photos { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 220px 220px; gap: 10px; margin-bottom: 36px; }
+.stages-photos img { height: 100%; object-fit: cover; }
+.stages-photos img:first-child { grid-row: span 2; }
+.stages-photos img:last-child { grid-column: span 2; }
 
 /* Contact */
 .contact { padding: 88px 20px 48px; }
@@ -114,5 +119,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   .duo, .projet { grid-template-columns: 1fr; gap: 24px; }
   .projet.reverse img { order: 0; }
   .prix, .produits { grid-template-columns: 1fr 1fr; }
+  .stages-photos { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 140px 140px; }
+  .stages-photos img:first-child { grid-column: span 2; grid-row: auto; }
   section { padding: 64px 0; }
 }

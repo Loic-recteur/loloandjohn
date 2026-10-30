@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lolo &amp; John Photographers</title>
-  <meta name="description" content="Loïc Terrier et Jonathan Lux, photographes et réalisateurs voyageurs. Livres, films, tirages d'art et stages photo.">
+  <title>Lolo &amp; John Photographers – Photographes voyageurs, livres et films</title>
+  <meta name="description" content="Loïc Terrier et Jonathan Lux, photographes et réalisateurs voyageurs : l'Inde à moto, les nomades du Sahara mauritanien. Livres photo, films, tirages d'art et stages photo.">
+  <link rel="canonical" href="https://loloandjohnphotographers.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lolo &amp; John Photographers">
+  <meta property="og:description" content="Photographes et réalisateurs voyageurs : livres photo, films, tirages d'art.">
+  <meta property="og:image" content="https://loloandjohnphotographers.com/images/zarga-la-langue-de-sable.jpg">
+  <link rel="icon" href="images/livre-inde-couverture.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +24,7 @@
     <nav>
       <a href="#projets">Projets</a>
       <a href="#tirages">Tirages</a>
-      <a href="#boutique">Boutique</a>
+      <a href="livres/">Livres &amp; films</a>
       <a href="#stages">Stages</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -30,7 +36,7 @@
     <div class="hero-text">
       <p class="kicker">Photographes &amp; réalisateurs voyageurs</p>
       <h1>Au plus près des Hommes, la beauté du vivant.</h1>
-      <a class="btn" href="#boutique">Voir la boutique</a>
+      <a class="btn" href="livres/">Découvrir nos livres</a>
     </div>
   </section>
 
@@ -46,7 +52,7 @@
   </section>
 
   <!-- Présentation -->
-  <section class="intro wrap">
+  <section id="nous" class="intro wrap">
     <blockquote>
       « Il est difficile de dire que l'on prend une photographie : c'est l'endroit, la scène ou la rencontre qui crée le fragment figé de l'instantané. »
     </blockquote>
@@ -74,7 +80,7 @@
         <p class="kicker">Inde · 10 mois · 13 000 km</p>
         <h3>Une aventure humaine au guidon de nos motos</h3>
         <p>Dix mois à moto à la rencontre des populations locales, du Rajasthan au Kerala. Le voyage est devenu un livre de 216 pages et 530 photographies, puis un film.</p>
-        <a class="link" href="#boutique">Le livre et le film →</a>
+        <a class="link" href="livres/">Le livre et le film →</a>
       </div>
     </article>
 
@@ -84,7 +90,7 @@
         <p class="kicker">Mauritanie · Sahara</p>
         <h3>Akhdar, le sel du désert</h3>
         <p>Une immersion au cœur des communautés nomades du Sahara mauritanien : un film documentaire et un livre photographique, « Nomades ».</p>
-        <a class="link" href="#boutique">Le film et le livre →</a>
+        <a class="link" href="livres/#nomades">Le livre et le film →</a>
       </div>
     </article>
   </section>
@@ -100,6 +106,7 @@
         <li><span>Dibond 40 × 60</span><strong>90 €</strong></li>
         <li><span>Dibond 60 × 90</span><strong>130 €</strong></li>
       </ul>
+      <a class="btn btn-clair" href="https://loicterrier.com/tirages/">Commander un tirage sur loicterrier.com</a>
     </div>
     <div class="galerie">
       <figure><img src="images/poesie-desertique.jpg" alt="" loading="lazy"><figcaption>Poésie désertique</figcaption></figure>
@@ -114,51 +121,50 @@
     </div>
   </section>
 
-  <!-- Boutique : pour l'instant les boutons renvoient vers la boutique WooCommerce existante -->
+  <!-- Livres et films : renvoient vers la page de vente /livres/ -->
   <section id="boutique" class="wrap">
-    <h2 class="section-title">Boutique</h2>
+    <h2 class="section-title">Livres &amp; films</h2>
     <div class="produits">
-      <a class="produit" href="https://boutique.loloandjohnphotographers.com/produit/inde-aventure-de-13-000km-guidon-de-nos-motos/">
-        <img src="images/inde-aventure-de-13-000km-guidon-de-nos-motos.jpg" alt="" loading="lazy">
+      <a class="produit" href="livres/">
+        <img src="images/livre-inde-couverture.jpg" alt="Couverture du livre Inde" loading="lazy">
         <h3>Livre « Inde, 13 000 km à moto »</h3>
         <p>216 pages · 530 photos · FR/EN</p>
         <strong>35 €</strong>
       </a>
-      <a class="produit" href="https://boutique.loloandjohnphotographers.com/produit/livre-photographique-nomades/">
-        <img src="images/livre-photographique-nomades.jpg" alt="" loading="lazy">
+      <a class="produit" href="livres/#nomades">
+        <img src="images/livre-nomades-couverture.jpg" alt="Couverture du livre Nomades" loading="lazy">
         <h3>Livre « Nomades »</h3>
         <p>Les nomades du Sahara mauritanien</p>
         <strong>29 €</strong>
       </a>
-      <a class="produit" href="https://boutique.loloandjohnphotographers.com/produit/akhdar-le-sel-du-desert-le-film/">
-        <img src="images/akhdar-le-sel-du-desert-le-film.jpg" alt="" loading="lazy">
+      <a class="produit" href="livres/#films">
+        <img src="images/film-akhdar.jpg" alt="Jaquette du film Akhdar" loading="lazy">
         <h3>Film « Akhdar, le sel du désert »</h3>
-        <p>Documentaire</p>
+        <p>Documentaire · DVD</p>
         <strong>15 €</strong>
       </a>
-      <a class="produit" href="https://boutique.loloandjohnphotographers.com/produit/carte-postales/">
-        <img src="images/carte-postales.jpg" alt="" loading="lazy">
-        <h3>Cartes postales</h3>
-        <p>12 vues de l'Inde · 10,5 × 15 cm</p>
-        <strong>1 € l'unité</strong>
-      </a>
-      <a class="produit" href="https://boutique.loloandjohnphotographers.com/produit/bon-cadeau/">
-        <img src="images/bon-cadeau.jpg" alt="" loading="lazy">
-        <h3>Bon cadeau</h3>
-        <p>Pour un tirage, un livre ou un stage</p>
-        <strong>dès 20 €</strong>
+      <a class="produit" href="livres/#films">
+        <img src="images/film-inde.jpg" alt="Jaquette du film Inde" loading="lazy">
+        <h3>Film « Inde, 13 000 km à moto »</h3>
+        <p>55 min · clé USB</p>
+        <strong>10 €</strong>
       </a>
     </div>
+    <p class="voir-tout"><a class="btn" href="livres/">Voir les livres et les films</a></p>
   </section>
 
-  <!-- Stages photo -->
+  <!-- Stages photo : désormais proposés par Loïc sur loicterrier.com -->
   <section id="stages" class="stages">
-    <div class="wrap stages-inner">
-      <div>
-        <h2 class="section-title">Stages photo</h2>
-        <p>Une semaine pour déconnecter et apprendre la photographie de voyage dans une ambiance conviviale, débutant ou confirmé. Dernière destination : la vallée de l'Ourika, dans le Haut Atlas marocain, à la rencontre des Berbères.</p>
-        <a class="btn" href="#contact">Être prévenu des prochaines dates</a>
+    <div class="wrap">
+      <h2 class="section-title">Stages photo</h2>
+      <p>Une semaine pour déconnecter et apprendre la photographie de voyage dans une ambiance conviviale, débutant ou confirmé : du désert mauritanien à la vallée de l'Ourika, dans le Haut Atlas marocain, à la rencontre des Berbères. Les stages continuent avec Loïc.</p>
+      <div class="stages-photos">
+        <img src="images/stage-desert.jpg" alt="Loïc montre ses photos à des enfants dans le désert" loading="lazy">
+        <img src="images/stage-aguerd.jpg" alt="Le village d'Aguerd dans le Haut Atlas" loading="lazy">
+        <img src="images/stage-atlas.jpg" alt="Une stagiaire photographie les montagnes de l'Atlas" loading="lazy">
+        <img src="images/stage-tajine.jpg" alt="Des tajines cuisent au feu de bois" loading="lazy">
       </div>
+      <a class="btn" href="https://loicterrier.com/stages-photo/">Voir les prochains stages sur loicterrier.com</a>
     </div>
   </section>
 

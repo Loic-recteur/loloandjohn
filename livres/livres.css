@@ -1,0 +1,71 @@
+/* Styles propres à la page Livres (le reste vient de ../style.css) */
+
+/* Menu en haut : ici il n'y a pas de photo derrière, donc menu sur fond clair */
+.nav-plein { position: static; background: var(--sable); }
+
+.btn-grand { padding: 18px 34px; font-size: 1.05rem; }
+.l-prix { font-family: var(--serif); font-size: 2rem; font-weight: 600; }
+.l-achat { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 28px; }
+
+/* 1. Accroche */
+.l-hero { padding-top: 32px; }
+.l-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+.l-hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 20px; }
+.l-promesse { font-size: 1.15rem; color: var(--gris); max-width: 46ch; }
+.l-couverture { box-shadow: 0 30px 60px -20px rgba(42,33,27,.45); transform: rotate(1.5deg); }
+.l-rassure { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 22px; font-size: .9rem; color: var(--gris); }
+.l-rassure li::before { content: "✓ "; color: var(--ocre); font-weight: 600; }
+
+/* 2. Presse */
+.l-presse { background: var(--encre); color: var(--sable); padding: 40px 0; }
+.l-presse ul { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 40px; font-family: var(--serif); font-size: 1.3rem; }
+.l-presse span { font-family: var(--sans); font-size: .8rem; color: #cbbfb1; margin-left: 4px; }
+
+/* 3. Pages intérieures */
+.l-pages { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.l-pages img { aspect-ratio: 2 / 1; object-fit: cover; background: #111; }
+.l-pages-3 { grid-template-columns: repeat(3, 1fr); margin-top: 48px; }
+
+/* 4. Histoire + fiche technique */
+.l-histoire { background: var(--sable-fonce); }
+.l-histoire-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; }
+.l-histoire p { margin-bottom: 14px; max-width: 58ch; }
+.l-fiche { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #d6c5a9; margin-top: 24px; }
+.l-fiche li { background: var(--sable-fonce); padding: 12px 14px; font-weight: 600; }
+.l-fiche span { display: block; font-size: .75rem; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; color: var(--gris); }
+.l-nomades .l-fiche { grid-template-columns: 1fr 1fr; }
+.l-nomades .l-fiche li { background: var(--sable); }
+.l-nomades .l-hero-grid { grid-template-columns: 1fr 1.1fr; }
+.l-nomades p { margin-bottom: 14px; max-width: 58ch; color: var(--gris); }
+
+/* 6. Films */
+.l-films { background: var(--encre); color: var(--sable); }
+.l-films-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.l-films article { display: grid; grid-template-columns: 160px 1fr; gap: 24px; align-items: start; }
+.l-films h3 { font-size: 1.4rem; margin-bottom: 10px; }
+.l-films p { color: #cbbfb1; font-size: .95rem; }
+.l-films .l-achat { margin-top: 16px; }
+.l-films .l-prix { font-size: 1.5rem; }
+
+/* 7. FAQ */
+.l-faq details { border-top: 1px solid #d6c5a9; padding: 18px 0; max-width: 760px; }
+.l-faq details:last-of-type { border-bottom: 1px solid #d6c5a9; }
+.l-faq summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; }
+.l-faq details p { margin-top: 10px; color: var(--gris); }
+
+/* 8. Appel final */
+.l-final { background: var(--ocre); color: #fff; text-align: center; }
+.l-final h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 10px; }
+.l-final p { margin-bottom: 28px; }
+.l-final .btn { background: var(--encre); }
+.l-final .btn:hover { background: #fff; color: var(--encre); }
+
+/* Téléphone */
+@media (max-width: 720px) {
+  .l-hero-grid, .l-histoire-grid, .l-nomades .l-hero-grid, .l-films-grid { grid-template-columns: 1fr; gap: 32px; }
+  .l-hero .l-couverture { order: -1; max-width: 300px; margin: 0 auto; }
+  .l-pages, .l-pages-3 { grid-template-columns: 1fr; }
+  .l-fiche { grid-template-columns: 1fr 1fr; }
+  .l-films article { grid-template-columns: 110px 1fr; }
+  .l-presse ul { font-size: 1.1rem; gap: 10px 24px; }
+}
